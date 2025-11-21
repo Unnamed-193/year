@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>С годовщиной!</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		body {
+			background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+		}
+
+		a {
+			display: block;
+			margin-bottom: 30px;
+			color: inherit;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+
+		.container {
+			width: 100%;
+			max-width: 900px;
+			text-align: center;
+		}
+
+		.certificate {
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+			padding: 40px;
+			margin-bottom: 30px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.certificate::before {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: -10px;
+			right: -10px;
+			bottom: -10px;
+			background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+			z-index: -1;
+			filter: blur(20px);
+			opacity: 0.7;
+		}
+
+		.header {
+			margin-bottom: 30px;
+		}
+
+		h1 {
+			color: #ff6b6b;
+			font-size: 2.8rem;
+			margin-bottom: 10px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+		}
+
+		.subtitle {
+			color: #555;
+			font-size: 1.2rem;
+			margin-bottom: 20px;
+		}
+
+		.certificate-content {
+			border: 2px dashed #ff9a9e;
+			border-radius: 15px;
+			padding: 30px;
+			background: #fffdf9;
+			position: relative;
+		}
+
+		.certificate-title {
+			font-size: 2.2rem;
+			color: #ff6b6b;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+
+		.message {
+			font-size: 1.3rem;
+			line-height: 1.6;
+			color: #555;
+			margin-bottom: 30px;
+			text-align: left;
+		}
+
+		.signature {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 40px;
+		}
+
+		.signature-item {
+			text-align: center;
+		}
+
+		.signature-line {
+			width: 200px;
+			height: 1px;
+			background: #333;
+			margin: 5px auto;
+		}
+
+		.date {
+			margin-top: 20px;
+			font-size: 1.1rem;
+			color: #777;
+		}
+
+		.hearts {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 1.5rem;
+			color: #ff6b6b;
+		}
+
+		.footer {
+			color: #fff;
+			font-size: 1rem;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Адаптивность */
+		@media (max-width: 768px) {
+			.certificate {
+				padding: 20px;
+			}
+
+			h1 {
+				font-size: 2.2rem;
+			}
+
+			.certificate-title {
+				font-size: 1.8rem;
+			}
+
+			.message {
+				font-size: 1.1rem;
+			}
+
+			.signature {
+				flex-direction: column;
+			}
+
+			.signature-line {
+				width: 150px;
+			}
+		}
+
+		@media (max-width: 480px) {
+			h1 {
+				font-size: 1.8rem;
+			}
+
+			.certificate-title {
+				font-size: 1.5rem;
+			}
+
+			.message {
+				font-size: 1rem;
+			}
+
+			.certificate-content {
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="certificate">
+			<div class="header">
+				<h1>С годовщиной!</h1>
+				<p class="subtitle">Этот день особенный, как и ты</p>
+			</div>
+
+			<div class="certificate-content">
+				<div class="hearts">♥ ♥ ♥</div>
+				<div class="certificate-title">СЕРТИФИКАТ</div>
+				<a href="present.webp" download>
+					<img src="present.webp" alt="">
+					<span>Нажми на картинку, чтобы скачать сертификат</span>
+				</a>
+
+				<div class="message">
+					<p>Дорогая Настенька,</p>
+					<p>Поздравляю тебя с нашей годовщиной! Этот год был наполнен счастливыми моментами, теплыми объятиями и
+						незабываемыми воспоминаниями.</p>
+					<p>Ты делаешь мою жизнь ярче и счастливее каждый день. Спасибо тебе за всё!</p>
+				</div>
+
+				<div class="signature">
+					<div class="signature-item">
+						<div class="signature-line"></div>
+						<p>Твой Кириллка</p>
+					</div>
+					<div class="signature-item">
+						<div class="signature-line"></div>
+						<p>Дата: 21.11.2025 - 22.11.2025</p>
+					</div>
+				</div>
+
+				<div class="date">
+					Годовщина: 6 лет вместе
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			Создано специально для тебя
+		</div>
+	</div>
+</body>
+
+</html>
